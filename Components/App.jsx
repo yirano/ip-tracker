@@ -1,9 +1,14 @@
 import React from 'react'
+import InfoCard from "./InfoCard"
+import Map from "./Map"
+import Searchbar from "./Searchbar"
 
 const App = () => {
     return (
         <div>
-            <h1>App Component</h1>
+            <Searchbar />
+            <InfoCard />
+            <Map />
         </div>
     )
 }
