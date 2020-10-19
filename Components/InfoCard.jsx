@@ -10,15 +10,15 @@ const InfoCard = (props) => {
             </div>
             <div>
                 <p className="title">Location</p>
-                <p>{info.location.city}, {info.location.region}, {info.location.country}</p>
+                <p className="info">{info.location.city}, {info.location.region}, {info.location.country}</p>
             </div>
             <div>
                 <p className="title">Timezone</p>
-                <p>{info.location.timezone}</p>
+                <p className="info">{info.location.timezone}</p>
             </div>
             <div>
                 <p className="title">ISP</p>
-                <p>{info.isp}</p>
+                <p className="info">{info.isp}</p>
             </div>
         </div>
     )

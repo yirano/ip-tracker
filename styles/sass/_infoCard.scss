@@ -1,0 +1,33 @@
+.infoCard {
+	display: flex;
+	position: absolute;
+	top: 135px;
+	width: 80vw;
+	height: 255px;
+	padding: 20px;
+	flex-direction: column;
+	text-align: center;
+	align-self: center;
+	justify-content: space-between;
+	background: #fff;
+	border-radius: 10px;
+	z-index: 999999;
+	div {
+		.title {
+			padding: 9px;
+			color: $dark-gray;
+			font-size: 0.53em;
+			font-weight: 500;
+			text-transform: uppercase;
+			letter-spacing: 0.2em;
+		}
+		.info {
+			color: $very-dark-gray;
+			font-weight: 700;
+			margin-bottom: 10px;
+		}
+	}
+	@media screen and (min-width: 800px) {
+		flex-direction: row;
+	}
+}

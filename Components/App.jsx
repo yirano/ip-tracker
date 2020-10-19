@@ -30,7 +30,7 @@ const App = () => {
     }
 
     return (
-        <div>
+        <div className="app">
             <Searchbar search={search} handleChange={handleChange} handleSubmit={handleSubmit} />
             {info ?
                 <InfoCard info={info} />

@@ -30095,11 +30095,17 @@ var InfoCard = function InfoCard(props) {
     className: "title"
   }, "IP Address"), /*#__PURE__*/_react.default.createElement("p", null, info.ip)), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("p", {
     className: "title"
-  }, "Location"), /*#__PURE__*/_react.default.createElement("p", null, info.location.city, ", ", info.location.region, ", ", info.location.country)), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("p", {
+  }, "Location"), /*#__PURE__*/_react.default.createElement("p", {
+    className: "info"
+  }, info.location.city, ", ", info.location.region, ", ", info.location.country)), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("p", {
     className: "title"
-  }, "Timezone"), /*#__PURE__*/_react.default.createElement("p", null, info.location.timezone)), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("p", {
+  }, "Timezone"), /*#__PURE__*/_react.default.createElement("p", {
+    className: "info"
+  }, info.location.timezone)), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("p", {
     className: "title"
-  }, "ISP"), /*#__PURE__*/_react.default.createElement("p", null, info.isp)));
+  }, "ISP"), /*#__PURE__*/_react.default.createElement("p", {
+    className: "info"
+  }, info.isp)));
 };
 
 var _default = InfoCard;
@@ -47732,7 +47738,7 @@ var Searchbar = function Searchbar(props) {
       search = props.search;
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "searchBar"
-  }, /*#__PURE__*/_react.default.createElement("form", {
+  }, /*#__PURE__*/_react.default.createElement("h2", null, "IP Address Tracker"), /*#__PURE__*/_react.default.createElement("form", {
     onSubmit: function onSubmit(e) {
       return handleSubmit(e);
     }
@@ -47746,7 +47752,7 @@ var Searchbar = function Searchbar(props) {
     placeholder: "Search for any IP address or domain"
   }), /*#__PURE__*/_react.default.createElement("input", {
     type: "submit",
-    value: "Search"
+    value: ">"
   })));
 };
 
@@ -47829,7 +47835,9 @@ var App = function App() {
     setSearch('');
   };
 
-  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_Searchbar.default, {
+  return /*#__PURE__*/_react.default.createElement("div", {
+    className: "app"
+  }, /*#__PURE__*/_react.default.createElement(_Searchbar.default, {
     search: search,
     handleChange: handleChange,
     handleSubmit: handleSubmit
@@ -47842,7 +47850,12 @@ var App = function App() {
 
 var _default = App;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","axios":"node_modules/axios/index.js","./InfoCard":"Components/InfoCard.jsx","./Map":"Components/Map.jsx","./Searchbar":"Components/Searchbar.jsx"}],"index.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","axios":"node_modules/axios/index.js","./InfoCard":"Components/InfoCard.jsx","./Map":"Components/Map.jsx","./Searchbar":"Components/Searchbar.jsx"}],"styles/css/index.css/index.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"./../../../assets/images/pattern-bg.png":[["pattern-bg.b79e96d3.png","assets/images/pattern-bg.png"],"assets/images/pattern-bg.png"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -47851,10 +47864,12 @@ var _reactDom = require("react-dom");
 
 var _App = _interopRequireDefault(require("./Components/App"));
 
+require("./styles/css/index.css");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (0, _reactDom.render)( /*#__PURE__*/_react.default.createElement(_App.default, null), document.querySelector("#root"));
-},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","./Components/App":"Components/App.jsx"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","./Components/App":"Components/App.jsx","./styles/css/index.css":"styles/css/index.css/index.css"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -47882,7 +47897,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63389" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57864" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
