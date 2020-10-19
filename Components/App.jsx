@@ -5,24 +5,37 @@ import Map from "./Map"
 import Searchbar from "./Searchbar"
 
 const App = () => {
-    const [ipAddr, setIpAddr] = useState(`8.8.8.8`)
+    const [addr, setAddr] = useState(`8.8.8.8`)
+    const [search, setSearch] = useState('')
+    const [info, setInfo] = useState('')
     const [loc, setLoc] = useState([37.4223, -122.085])
     useEffect(() => {
-        axios.get(`https://geo.ipify.org/api/v1?apiKey=${process.env.REACT_APP_API}&ipAddress=${ipAddr}`)
+        axios.get(`https://geo.ipify.org/api/v1?apiKey=${process.env.REACT_APP_API}&ipAddress=${addr}`)
             .then(res => {
                 console.log(res.data)
-                console.log(res.data.location.lat, res.data.location.lng)
+                setInfo(res.data)
                 setLoc([res.data.location.lat, res.data.location.lng])
             }).catch(err => {
                 console.log(err)
             })
-    }, [])
+    }, [addr])
 
+    const handleChange = e => {
+        setSearch(e.target.value)
+    }
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        setAddr(search)
+        setSearch('')
+    }
 
     return (
         <div>
-            <Searchbar />
-            <InfoCard />
+            <Searchbar search={search} handleChange={handleChange} handleSubmit={handleSubmit} />
+            {info ?
+                <InfoCard info={info} />
+                : null
+            }
             <Map position={loc} />
         </div>
     )

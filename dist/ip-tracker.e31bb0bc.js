@@ -30087,10 +30087,19 @@ var _react = _interopRequireDefault(require("react"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var InfoCard = function InfoCard() {
+var InfoCard = function InfoCard(props) {
+  var info = props.info;
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "infoCard"
-  }, /*#__PURE__*/_react.default.createElement("h1", null, "Info Card"));
+  }, /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("p", {
+    className: "title"
+  }, "IP Address"), /*#__PURE__*/_react.default.createElement("p", null, info.ip)), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("p", {
+    className: "title"
+  }, "Location"), /*#__PURE__*/_react.default.createElement("p", null, info.location.city, ", ", info.location.region, ", ", info.location.country)), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("p", {
+    className: "title"
+  }, "Timezone"), /*#__PURE__*/_react.default.createElement("p", null, info.location.timezone)), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("p", {
+    className: "title"
+  }, "ISP"), /*#__PURE__*/_react.default.createElement("p", null, info.isp)));
 };
 
 var _default = InfoCard;
@@ -47717,10 +47726,28 @@ var _react = _interopRequireDefault(require("react"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Searchbar = function Searchbar() {
+var Searchbar = function Searchbar(props) {
+  var handleChange = props.handleChange,
+      handleSubmit = props.handleSubmit,
+      search = props.search;
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "searchBar"
-  }, /*#__PURE__*/_react.default.createElement("h1", null, "Searchbar"));
+  }, /*#__PURE__*/_react.default.createElement("form", {
+    onSubmit: function onSubmit(e) {
+      return handleSubmit(e);
+    }
+  }, /*#__PURE__*/_react.default.createElement("input", {
+    type: "text",
+    name: "addr",
+    value: search,
+    onChange: function onChange(e) {
+      return handleChange(e);
+    },
+    placeholder: "Search for any IP address or domain"
+  }), /*#__PURE__*/_react.default.createElement("input", {
+    type: "submit",
+    value: "Search"
+  })));
 };
 
 var _default = Searchbar;
@@ -47764,24 +47791,51 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 var App = function App() {
   var _useState = (0, _react.useState)("8.8.8.8"),
       _useState2 = _slicedToArray(_useState, 2),
-      ipAddr = _useState2[0],
-      setIpAddr = _useState2[1];
+      addr = _useState2[0],
+      setAddr = _useState2[1];
 
-  var _useState3 = (0, _react.useState)([37.4223, -122.085]),
+  var _useState3 = (0, _react.useState)(''),
       _useState4 = _slicedToArray(_useState3, 2),
-      loc = _useState4[0],
-      setLoc = _useState4[1];
+      search = _useState4[0],
+      setSearch = _useState4[1];
+
+  var _useState5 = (0, _react.useState)(''),
+      _useState6 = _slicedToArray(_useState5, 2),
+      info = _useState6[0],
+      setInfo = _useState6[1];
+
+  var _useState7 = (0, _react.useState)([37.4223, -122.085]),
+      _useState8 = _slicedToArray(_useState7, 2),
+      loc = _useState8[0],
+      setLoc = _useState8[1];
 
   (0, _react.useEffect)(function () {
-    _axios.default.get("https://geo.ipify.org/api/v1?apiKey=".concat("at_TnMKxkSyNbOTpXoYAf5kE7kWVSLyN", "&ipAddress=").concat(ipAddr)).then(function (res) {
+    _axios.default.get("https://geo.ipify.org/api/v1?apiKey=".concat("at_TnMKxkSyNbOTpXoYAf5kE7kWVSLyN", "&ipAddress=").concat(addr)).then(function (res) {
       console.log(res.data);
-      console.log(res.data.location.lat, res.data.location.lng);
+      setInfo(res.data);
       setLoc([res.data.location.lat, res.data.location.lng]);
     }).catch(function (err) {
       console.log(err);
     });
-  }, []);
-  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_Searchbar.default, null), /*#__PURE__*/_react.default.createElement(_InfoCard.default, null), /*#__PURE__*/_react.default.createElement(_Map.default, {
+  }, [addr]);
+
+  var handleChange = function handleChange(e) {
+    setSearch(e.target.value);
+  };
+
+  var handleSubmit = function handleSubmit(e) {
+    e.preventDefault();
+    setAddr(search);
+    setSearch('');
+  };
+
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_Searchbar.default, {
+    search: search,
+    handleChange: handleChange,
+    handleSubmit: handleSubmit
+  }), info ? /*#__PURE__*/_react.default.createElement(_InfoCard.default, {
+    info: info
+  }) : null, /*#__PURE__*/_react.default.createElement(_Map.default, {
     position: loc
   }));
 };

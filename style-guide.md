@@ -23,6 +23,9 @@ The designs were created to the following widths:
 - Family: [Rubik](https://fonts.google.com/specimen/Rubik)
 - Weights: 400, 500, 700
 
+
+
+
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
 <style>
