@@ -37,8 +37,8 @@ body {
     max-width: 1440px; }
   .searchBar input[type=text] {
     flex-grow: 1;
-    height: 3.5em;
-    padding: 1% 4%;
+    height: 3em;
+    padding: 4px 17px;
     border: none;
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px; }
@@ -62,25 +62,36 @@ body {
   height: 255px;
   padding: 20px;
   flex-direction: column;
-  text-align: center;
   align-self: center;
   justify-content: space-between;
   background: #fff;
   border-radius: 10px;
   z-index: 999999; }
-  .infoCard div .title {
-    padding: 9px;
-    color: #969696;
-    font-size: 0.53rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.2em; }
-  .infoCard div .info {
-    color: #2b2b2b;
-    font-weight: 700;
-    font-size: 1rem;
-    margin-bottom: 10px; }
+  .infoCard .infoDiv {
+    width: 25%;
+    margin-top: -20px; }
+    .infoCard .infoDiv .title {
+      padding: 9px;
+      color: #969696;
+      font-size: 0.53rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.2em; }
+    .infoCard .infoDiv .info {
+      color: #2b2b2b;
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 10px; }
   @media screen and (min-width: 800px) {
     .infoCard {
       flex-direction: row;
-      height: 134px; } }
+      align-items: center;
+      height: 134px; }
+      .infoCard .infoDiv {
+        height: 69px; }
+        .infoCard .infoDiv .info {
+          font-size: 1.4rem; }
+      .infoCard .border {
+        height: 60px;
+        padding-right: 20px;
+        border-left: 1px solid #969696; } }

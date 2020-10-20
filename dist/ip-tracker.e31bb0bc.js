@@ -30091,17 +30091,33 @@ var InfoCard = function InfoCard(props) {
   var info = props.info;
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "infoCard"
-  }, /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("p", {
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "infoDiv"
+  }, /*#__PURE__*/_react.default.createElement("p", {
     className: "title"
-  }, "IP Address"), /*#__PURE__*/_react.default.createElement("p", null, info.ip)), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("p", {
+  }, "IP Address"), /*#__PURE__*/_react.default.createElement("p", {
+    className: "info"
+  }, info.ip)), /*#__PURE__*/_react.default.createElement("div", {
+    className: "border"
+  }), /*#__PURE__*/_react.default.createElement("div", {
+    className: "infoDiv"
+  }, /*#__PURE__*/_react.default.createElement("p", {
     className: "title"
   }, "Location"), /*#__PURE__*/_react.default.createElement("p", {
     className: "info"
-  }, info.location.city, ", ", info.location.region, ", ", info.location.country)), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("p", {
+  }, info.location.city, ", ", info.location.region, ", ", info.location.country)), /*#__PURE__*/_react.default.createElement("div", {
+    className: "border"
+  }), /*#__PURE__*/_react.default.createElement("div", {
+    className: "infoDiv"
+  }, /*#__PURE__*/_react.default.createElement("p", {
     className: "title"
   }, "Timezone"), /*#__PURE__*/_react.default.createElement("p", {
     className: "info"
-  }, info.location.timezone)), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("p", {
+  }, info.location.timezone)), /*#__PURE__*/_react.default.createElement("div", {
+    className: "border"
+  }), /*#__PURE__*/_react.default.createElement("div", {
+    className: "infoDiv"
+  }, /*#__PURE__*/_react.default.createElement("p", {
     className: "title"
   }, "ISP"), /*#__PURE__*/_react.default.createElement("p", {
     className: "info"

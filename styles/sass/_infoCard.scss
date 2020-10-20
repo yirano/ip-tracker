@@ -7,13 +7,14 @@
 	height: 255px;
 	padding: 20px;
 	flex-direction: column;
-	text-align: center;
 	align-self: center;
 	justify-content: space-between;
 	background: #fff;
 	border-radius: 10px;
 	z-index: 999999;
-	div {
+	.infoDiv {
+		width: 25%;
+		margin-top: -20px;
 		.title {
 			padding: 9px;
 			color: $dark-gray;
@@ -31,6 +32,18 @@
 	}
 	@media screen and (min-width: 800px) {
 		flex-direction: row;
+		align-items: center;
 		height: 134px;
+		.infoDiv {
+			height: 69px;
+			.info {
+				font-size: 1.4rem;
+			}
+		}
+		.border {
+			height: 60px;
+			padding-right: 20px;
+			border-left: 1px solid $dark-gray;
+		}
 	}
 }
