@@ -96,3 +96,19 @@ body {
         height: 60px;
         padding-right: 20px;
         border-left: 1px solid #969696; } }
+
+.attribution {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
+  background: url(../../../assets/images/pattern-bg.png) no-repeat;
+  background-size: cover;
+  text-align: center;
+  color: #ededed;
+  font-size: 0.9rem;
+  letter-spacing: 0.1em; }
+  .attribution a {
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 700; }

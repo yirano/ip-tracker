@@ -47774,6 +47774,32 @@ var Searchbar = function Searchbar(props) {
 
 var _default = Searchbar;
 exports.default = _default;
+},{"react":"node_modules/react/index.js"}],"Components/Footer.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Footer = function Footer() {
+  return /*#__PURE__*/_react.default.createElement("div", {
+    class: "attribution"
+  }, "Challenge by ", /*#__PURE__*/_react.default.createElement("a", {
+    href: "https://www.frontendmentor.io?ref=challenge",
+    target: "_blank"
+  }, " Frontend Mentor"), ". Coded by ", /*#__PURE__*/_react.default.createElement("a", {
+    href: "yirano.dev",
+    target: "_blank"
+  }, " Tiffany Arellano"), ".");
+};
+
+var _default = Footer;
+exports.default = _default;
 },{"react":"node_modules/react/index.js"}],"Components/App.jsx":[function(require,module,exports) {
 "use strict";
 
@@ -47791,6 +47817,8 @@ var _InfoCard = _interopRequireDefault(require("./InfoCard"));
 var _Map = _interopRequireDefault(require("./Map"));
 
 var _Searchbar = _interopRequireDefault(require("./Searchbar"));
+
+var _Footer = _interopRequireDefault(require("./Footer"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -47861,12 +47889,12 @@ var App = function App() {
     info: info
   }) : null, /*#__PURE__*/_react.default.createElement(_Map.default, {
     position: loc
-  }));
+  }), /*#__PURE__*/_react.default.createElement(_Footer.default, null));
 };
 
 var _default = App;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","axios":"node_modules/axios/index.js","./InfoCard":"Components/InfoCard.jsx","./Map":"Components/Map.jsx","./Searchbar":"Components/Searchbar.jsx"}],"styles/css/index.css/index.css":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","axios":"node_modules/axios/index.js","./InfoCard":"Components/InfoCard.jsx","./Map":"Components/Map.jsx","./Searchbar":"Components/Searchbar.jsx","./Footer":"Components/Footer.jsx"}],"styles/css/index.css/index.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
@@ -47913,7 +47941,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51479" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51932" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -3,6 +3,7 @@ import axios from 'axios'
 import InfoCard from "./InfoCard"
 import Map from "./Map"
 import Searchbar from "./Searchbar"
+import Footer from "./Footer"
 
 const App = () => {
     const [addr, setAddr] = useState(`8.8.8.8`)
@@ -37,6 +38,7 @@ const App = () => {
                 : null
             }
             <Map position={loc} />
+            <Footer />
         </div>
     )
 }
