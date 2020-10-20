@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+*,
+html,
+body {
+  margin: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: 16px; }
+
+.app {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center; }
+
+.searchBar {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 280px;
+  margin-top: -20px;
+  align-items: center;
+  background: url(../../../assets/images/pattern-bg.png) no-repeat;
+  background-size: cover;
+  padding-top: 50px; }
+  .searchBar h2 {
+    margin-bottom: 20px;
+    color: #fff;
+    font-weight: 400; }
+  .searchBar form {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 80vw;
+    color: #fff;
+    max-width: 1440px; }
+  .searchBar input[type=text] {
+    flex-grow: 1;
+    height: 3em;
+    padding: 4px 17px;
+    border: none;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px; }
+  .searchBar input[type=submit] {
+    background: #000;
+    width: 45px;
+    border-color: #000;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    color: #fff; }
+  @media screen and (min-width: 800px) {
+    .searchBar {
+      height: 220px; } }
+
+.infoCard {
+  display: flex;
+  position: absolute;
+  top: 135px;
+  width: 80vw;
+  max-width: 1440px;
+  height: 255px;
+  padding: 20px;
+  flex-direction: column;
+  align-self: center;
+  justify-content: space-between;
+  background: #fff;
+  border-radius: 10px;
+  z-index: 999999; }
+  .infoCard .infoDiv {
+    width: 25%;
+    margin-top: -20px; }
+    .infoCard .infoDiv .title {
+      padding: 9px;
+      color: #969696;
+      font-size: 0.53rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.2em; }
+    .infoCard .infoDiv .info {
+      color: #2b2b2b;
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 10px; }
+  @media screen and (min-width: 800px) {
+    .infoCard {
+      flex-direction: row;
+      align-items: center;
+      height: 134px; }
+      .infoCard .infoDiv {
+        height: 69px; }
+        .infoCard .infoDiv .info {
+          font-size: 1.4rem; }
+      .infoCard .border {
+        height: 60px;
+        padding-right: 20px;
+        border-left: 1px solid #969696; } }

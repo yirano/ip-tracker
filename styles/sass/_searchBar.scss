@@ -1,0 +1,42 @@
+.searchBar {
+	display: flex;
+	flex-direction: column;
+	width: 100vw;
+	height: 280px;
+	margin-top: -20px;
+	align-items: center;
+	background: url(#{$imgPath}/pattern-bg.png) no-repeat;
+	background-size: cover;
+	padding-top: 50px;
+	h2 {
+		margin-bottom: 20px;
+		color: #fff;
+		font-weight: 400;
+	}
+	form {
+		display: flex;
+		flex-wrap: nowrap;
+		width: 80vw;
+		color: #fff;
+		max-width: 1440px;
+	}
+	input[type=text] {
+		flex-grow: 1;
+		height: 3em;
+		padding: 4px 17px;
+		border: none;
+		border-top-left-radius: 8px;
+		border-bottom-left-radius: 8px;
+	}
+	input[type=submit] {
+		background: #000;
+		width: 45px;
+		border-color: #000;
+		border-top-right-radius: 8px;
+		border-bottom-right-radius: 8px;
+		color: #fff;
+	}
+	@media screen and (min-width: 800px) {
+		height: 220px;
+	}
+}

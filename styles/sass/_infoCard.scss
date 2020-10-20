@@ -1,0 +1,49 @@
+.infoCard {
+	display: flex;
+	position: absolute;
+	top: 135px;
+	width: 80vw;
+	max-width: 1440px;
+	height: 255px;
+	padding: 20px;
+	flex-direction: column;
+	align-self: center;
+	justify-content: space-between;
+	background: #fff;
+	border-radius: 10px;
+	z-index: 999999;
+	.infoDiv {
+		width: 25%;
+		margin-top: -20px;
+		.title {
+			padding: 9px;
+			color: $dark-gray;
+			font-size: 0.53rem;
+			font-weight: 500;
+			text-transform: uppercase;
+			letter-spacing: 0.2em;
+		}
+		.info {
+			color: $very-dark-gray;
+			font-weight: 700;
+			font-size: 1rem;
+			margin-bottom: 10px;
+		}
+	}
+	@media screen and (min-width: 800px) {
+		flex-direction: row;
+		align-items: center;
+		height: 134px;
+		.infoDiv {
+			height: 69px;
+			.info {
+				font-size: 1.4rem;
+			}
+		}
+		.border {
+			height: 60px;
+			padding-right: 20px;
+			border-left: 1px solid $dark-gray;
+		}
+	}
+}

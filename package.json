@@ -1,0 +1,32 @@
+{
+  "name": "ip-tracker",
+  "version": "1.0.0",
+  "description": "![Design preview for the IP Address Tracker coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "scss": "node-sass --watch styles/sass/index.scss -o styles/css/index.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yirano/ip-tracker.git"
+  },
+  "author": "Tiffany Arellano",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yirano/ip-tracker/issues"
+  },
+  "homepage": "https://github.com/yirano/ip-tracker#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  },
+  "dependencies": {
+    "axios": "^0.20.0",
+    "leaflet": "^1.7.1",
+    "node-sass": "^4.14.1",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "react-leaflet": "^2.7.0"
+  }
+}

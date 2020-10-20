@@ -22,3 +22,19 @@ The designs were created to the following widths:
 
 - Family: [Rubik](https://fonts.google.com/specimen/Rubik)
 - Weights: 400, 500, 700
+
+
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+<style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+
+
+<div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="yirano.dev" target="_blank">Tiffany Arellano</a>.
+  </div> 
