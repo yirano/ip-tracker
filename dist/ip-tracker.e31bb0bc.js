@@ -47765,7 +47765,7 @@ var Searchbar = function Searchbar(props) {
     onChange: function onChange(e) {
       return handleChange(e);
     },
-    placeholder: "Search for any IP address or domain"
+    placeholder: "Search for any IP address"
   }), /*#__PURE__*/_react.default.createElement("input", {
     type: "submit",
     value: ">"
